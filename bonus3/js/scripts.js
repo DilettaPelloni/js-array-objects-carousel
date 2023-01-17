@@ -62,9 +62,9 @@ let current = 0;
 const slides = document.querySelectorAll('.slide');
 const thumbs = document.querySelectorAll('.thumb');
 
+// //avanzamento automatico slide
 
 //SOLUZIONE 1
-// //avanzamento automatico slide
 // let autoPlay = setInterval(nextSlide, 3000);
 // let reverse = false;
 
