@@ -56,52 +56,47 @@ const rightButton = document.querySelector('.button-right');
 //creo il contaore di current
 let current = 0;
 
+//creo gli array con slide e thumb
+const slides = document.getElementsByClassName('slide');
+const thumbs = document.getElementsByClassName('thumb');
+
 //al click sul destro
 rightButton.addEventListener('click',() => {
-        //creo gli array con slide e thumb
-        const slides = document.getElementsByClassName('slide');
-        const thumbs = document.getElementsByClassName('thumb');
-
         //tolgo la classe current
         slides[current].classList.remove('current');
         thumbs[current].classList.remove('current');
 
         //aggiorno il contatore current
-        current++;
+        if (current == slides.length - 1) {
+            current = 0;
+        }
+        else {
+            current++;
+        }
 
         //assegno la classe current alla prox
         slides[current].classList.add('current');
         thumbs[current].classList.add('current');
-
-        //rendo visibile il bottone di sinistra
-        leftButton.classList.remove('hidden');
-        //se sono all'ultima slide faccio sparire il bottone
-        if (current == slides.length - 1) {
-            rightButton.classList.add('hidden');
-        }
     }
 )
 
 //al click sul sinistro
 leftButton.addEventListener('click',() => {
-        //creo gli array con slide e thumb
-        const slides = document.querySelectorAll('.slide');
-        const thumbs = document.querySelectorAll('.thumb');
         //tolgo la classe current
         slides[current].classList.remove('current');
         thumbs[current].classList.remove('current');
+
         //aggiorno il contatore current
-        current--;
-        //assegno la classe current alla prox
+        if (current == 0) {
+            current = slides.length - 1;
+        }
+        else {
+            current--;
+        }
+
+        //assegno la classe current alla prec
         slides[current].classList.add('current');
         thumbs[current].classList.add('current');
-
-        //rendo visibile il bottone di destra
-        rightButton.classList.remove('hidden');
-        //se sono alla prima slide faccio sparire il bottone
-        if (current == 0) {
-            leftButton.classList.add('hidden');
-        }
     }
 )
 
