@@ -28,6 +28,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 80% 30%;
 }
 
 /* SLIDE BOX */
@@ -49,16 +50,24 @@ main {
 }
 
 /* TEXT BOX */
-#text-box {
+.text-box {
     width: 100%;
     padding: 1rem 2rem;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: end;
 
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.text-box p {
+    margin-top: 1rem;
+    width: 70%;
 }
 
 
@@ -70,13 +79,13 @@ main {
 }
 
 /* THUMB BOX */
-.thumb-box {
+#thumb-box {
     height: 100%;
     background-color: black;
     display: flex;
 }
 
-.thumb-box .thumb {
+#thumb-box .thumb {
     height: 100%;
     width: 20%;
     background-color: gold;
@@ -84,7 +93,7 @@ main {
     position: relative;
 }
 
-.thumb-box .thumb.selected {
+#thumb-box .thumb.selected {
     opacity: 1;
     border: 3px solid lightgray;
 }
