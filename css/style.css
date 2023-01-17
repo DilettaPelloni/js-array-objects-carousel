@@ -129,3 +129,7 @@ main {
 #button-box .button-right {
     right: 2rem;
 }
+
+#button-box div.hidden {
+    display: none;
+}
