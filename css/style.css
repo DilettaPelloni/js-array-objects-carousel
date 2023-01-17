@@ -13,7 +13,7 @@ main {
 
 #carousel {
     height: 70%;
-    width: 80%;
+    width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,11 +89,11 @@ main {
     height: 100%;
     width: 20%;
     background-color: gold;
-    opacity: 0.7;
+    opacity: 0.6;
     position: relative;
 }
 
-#thumb-box .thumb.selected {
+#thumb-box .thumb.current {
     opacity: 1;
     border: 3px solid lightgray;
 }

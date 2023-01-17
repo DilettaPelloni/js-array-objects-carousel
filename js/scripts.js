@@ -43,6 +43,10 @@ images.forEach((element, i) => {
     const thumb = createImgContainer(element.image);
     thumb.classList.add('thumb');
     thumbBox.append(thumb);
+    //se è la prima le do la classe current
+    if(i == 0) {
+        thumb.classList.add('current');
+    }
 });
 
 
