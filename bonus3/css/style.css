@@ -1,0 +1,144 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#carousel {
+    height: 70%;
+    width: 60%;
+    background-color: lightcoral;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 80% 30%;
+}
+
+/* SLIDE BOX */
+#slide-box {
+    height: 80%;
+    background-color: aqua;
+
+    position: relative;
+}
+
+#slide-box .slide {
+    height: 100%;
+    background-color: blueviolet;
+    display: none;
+}
+
+#slide-box .slide.current {
+    display: block;
+}
+
+/* TEXT BOX */
+.text-box {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: end;
+
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text-box p {
+    margin-top: 1rem;
+    width: 70%;
+}
+
+
+/* SELECT BOX */
+#select-box {
+    height: 20%;
+    background-color: saddlebrown;
+    position: relative;
+}
+
+/* THUMB BOX */
+#thumb-box {
+    height: 100%;
+    background-color: black;
+    display: flex;
+}
+
+#thumb-box .thumb {
+    height: 100%;
+    width: 20%;
+    background-color: gold;
+    opacity: 0.6;
+    position: relative;
+}
+
+#thumb-box .thumb.current {
+    opacity: 1;
+    border: 3px solid white;
+}
+
+/* BUTTON BOX */
+#button-box .button-left,
+#button-box .button-right {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: 20;
+    cursor: pointer;
+}
+
+#button-box .button-left {
+    left: 2rem;
+}
+
+#button-box .button-right {
+    right: 2rem;
+}
+
+#button-box div.hidden {
+    display: none;
+}
+
+/* COMMAND BOX */
+
+.command-box {
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.command-box button {
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
